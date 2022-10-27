@@ -13,6 +13,7 @@ export default class Router extends Component {
 
     render() {
 
+        //ASOCIAMOS EL IDM QUE RECOGEMOS DE LA CLASE A LA RUTA
         function MostrarEquiposElement(){
             var {idequipo} = useParams();
             return(
@@ -20,6 +21,7 @@ export default class Router extends Component {
             )
         }
 
+        //ASOCIAMOS EL IDM QUE RECOGEMOS DE LA CLASE A LA RUTA
         function MostrarJugadoresElement(){
             var {idequipo} = useParams();
             return(
@@ -27,6 +29,7 @@ export default class Router extends Component {
             )
         }
         
+        //ASOCIAMOS EL IDM QUE RECOGEMOS DE LA CLASE A LA RUTA
         function DetallesJugadoresElement(){
             var {idjugador} = useParams();
             return(
@@ -39,6 +42,7 @@ export default class Router extends Component {
                 <MenuRutas/>
                 <Routes>
                     <Route path='/' element={<PaginaPrincipal/>} />
+                    {/* LLAMAMOS A LA RUTA Y AL ID :id */}
                     <Route path='/Equipos/:idequipo' element={<MostrarEquiposElement/>}/>
                     <Route path='/jugadores/:idequipo' element={<MostrarJugadoresElement/>}/>
                     <Route path='/details/:idjugador' element={<DetallesJugadoresElement/>}/>

@@ -46,7 +46,7 @@ export default class MostrarJugadores extends Component {
                                         <td>{jugadores.nombre}</td>
                                         <td>{jugadores.posicion}</td>
                                         <td><img src={jugadores.imagen} width={"100px"} /></td>
-                                        <td><NavLink to={"/details/" + jugadores.idJugador}>Detalles</NavLink></td>
+                                        <td><NavLink className="btn btn-success" to={"/details/" + jugadores.idJugador}>Detalles</NavLink></td>
                                     </tr>
                                 )
                             })

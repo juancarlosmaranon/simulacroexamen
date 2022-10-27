@@ -9,9 +9,10 @@ export default class MenuRutas extends Component {
     equipos: [],
     status: false
   }
-
+  
+  //RECOGEMOS LOS EQUIPOS CON EL axios.get
   listaEquipos = () => {
-
+    //INVESTIGAMOS EN LA API PARA COGER LA REQUEST
     var request = 'api/Equipos';
     var url = Global.urlEquipos + request;
     axios.get(url).then(response => {
