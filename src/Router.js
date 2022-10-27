@@ -7,6 +7,7 @@ import MostrarJugadores from './components/MostrarJugadores'
 import PaginaPrincipal from './components/PaginaPrincipal'
 import Apuestas from './components/Apuestas'
 import NuevaApuesta from './components/NuevaApuesta'
+import DetallesJugadores from './components/DetallesJugadores'
 
 export default class Router extends Component {
 
@@ -25,6 +26,13 @@ export default class Router extends Component {
                 <MostrarJugadores idequipo={idequipo}/>
             )
         }
+        
+        function DetallesJugadoresElement(){
+            var {idjugador} = useParams();
+            return(
+                <DetallesJugadores idJugador={idjugador}/>
+            )
+        }
 
         return (
             <BrowserRouter>
@@ -33,6 +41,7 @@ export default class Router extends Component {
                     <Route path='/' element={<PaginaPrincipal/>} />
                     <Route path='/Equipos/:idequipo' element={<MostrarEquiposElement/>}/>
                     <Route path='/jugadores/:idequipo' element={<MostrarJugadoresElement/>}/>
+                    <Route path='/details/:idjugador' element={<DetallesJugadoresElement/>}/>
                     <Route path='/apuestas' element={<Apuestas/>}/>
                     <Route path='/nuevaapuesta' element={<NuevaApuesta/>}/>
                 </Routes>

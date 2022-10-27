@@ -11,6 +11,7 @@ export default class NuevaApuesta extends Component {
 
     state = {
         status: false
+
     }
 
     crearApuesta=(e)=>{
@@ -21,7 +22,8 @@ export default class NuevaApuesta extends Component {
         var resultado = this.cajaResultadoRef.current.value;
         var fecha = this.cajaFechaRef.current.value;
         var napuesta={
-            nombre:nombre,
+            idApuesta:1,
+            usuario:nombre,
             resultado:resultado,
             fecha:fecha
         }
@@ -38,8 +40,7 @@ export default class NuevaApuesta extends Component {
     render() {
         if(this.state.status == true){
             return(
-                // <Navigate to="/apuestas"/>
-                <h1>Apuesta realizada</h1>
+                <Navigate to="/apuestas"/>
             );
         }
         return (
